@@ -8,7 +8,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import matplotlib.pyplot as plot
 
-#fan chart print
+# fan chart print
 def fanPrint(l,counter):
     if l == 1:
         for key, value in counter.items():
@@ -41,11 +41,11 @@ def fanPrint(l,counter):
 with open("moreThan20/mentors_gov.txt",'r',encoding='utf-8') as f2:
                 text=f2.read()
                 lower_case=text.lower()
-                clean_txet=lower_case.translate(str.maketrans('','',string.punctuation))
+                clean_text=lower_case.translate(str.maketrans('','',string.punctuation))
                 with open("cleanText.txt", 'w', encoding='utf-8') as f3:
-                   f3.write(clean_txet)
+                   f3.write(clean_text)
                 #tokenize
-                tokenized_words = word_tokenize(clean_txet)
+                tokenized_words = word_tokenize(clean_text)
                 # remove stopwords
                 stop_words = set(stopwords.words('english'))
 
